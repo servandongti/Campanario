@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -84,3 +85,20 @@ const Home: NextPage = () => {
 }
 
 export default Home
+=======
+import Link from 'next/link'
+import Layout from '../components/Layout'
+
+const IndexPage = () => (
+  <Layout title="Home | Next.js + TypeScript Example">
+    <h1>Hello Next.js 👋</h1>
+    <p>
+      <Link href="/about">
+        <a>About</a>
+      </Link>
+    </p>
+  </Layout>
+)
+
+export default IndexPage
+>>>>>>> 5e5a624fcff64cd44f7dc0dad8206741ac36ac74
