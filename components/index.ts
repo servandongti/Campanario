@@ -1,3 +1,7 @@
 export * from './Footer'
 export * from './Layout'
 export * from './Wrapper'
+export * from './Hero'
+export * from './Navbar'
+export * from './NavLayout'
+export * from './Logo'

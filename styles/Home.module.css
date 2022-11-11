@@ -1,0 +1,7 @@
+.goldGradient {
+  background: linear-gradient(89.92deg, #E3A455 24.02%, rgba(246, 219, 166, 0.972378) 35.63%, rgba(255, 235, 195, 0.946494) 46.51%, rgba(240, 190, 121, 0.929807) 53.52%, rgba(103, 61, 34, 0.916149) 59.26%, rgba(186, 127, 59, 0.907748) 65.25%, rgba(238, 188, 112, 0.9) 70.78%, #3F1F0F 75.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
