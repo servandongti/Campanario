@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { Navbar, Dropdown, Button, Link } from "@nextui-org/react";
-import { clsx, descs, salones, socials } from "../utils";
+import { clsx, salones, socials } from "../utils";
 import { Logo } from "./Logo";
 import { NavLayout } from "./NavLayout";
 import { SocialIcon } from "./SocialIcon";
