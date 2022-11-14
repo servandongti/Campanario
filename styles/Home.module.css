@@ -5,3 +5,27 @@
   background-clip: text;
   text-fill-color: transparent;
 }
+
+.elCampanarioGradient {
+  background: linear-gradient(89.92deg, #8B3D67 24.02%, rgba(139, 61, 103, 0.9) 39.58%, #3E1B2E 75.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.misionDelCampanarioGradient {
+  background: linear-gradient(89.92deg, #8862AD 24.02%, rgba(86, 61, 109, 0.9) 39.58%, #3C2B4D 75.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.elGranCampanarioGradient {
+  background: linear-gradient(89.89deg, #8F999A 2.97%, rgba(90, 96, 97, 0.9) 38.91%, #3F4444 91.48%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

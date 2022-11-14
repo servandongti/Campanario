@@ -10,13 +10,8 @@ interface Props {
   logoSrc: string;
   color: string;
 }
-export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
-  const collapseItems = [
-    "El Campanario",
-    "Mision del Campanario",
-    "EL Gran Campanario",
-  ];
 
+export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
   return (
     <NavLayout>
       <Navbar isBordered variant="sticky">
@@ -70,11 +65,14 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
               }}
             >
               {
-                Object.entries(salones).slice(1, 4).map(([key, salon]) => (
-                  <Dropdown.Item key={key} textValue={salon.title} description={salon.description}>
-                    <Link href={salon.href} css={{ color: salon.color, w: '100%' }}>
-                      {salon.title}
-                    </Link>
+                Object.entries(salones).slice(1, 4).map(([key, { title, description, href, colorTitle, color }]) => (
+                  <Dropdown.Item key={key} textValue={title} description={description}>
+                    <NextLink
+                      href={{ pathname: href, query: { title: title, description: description, colorTitle: colorTitle } }}>
+                      <Link css={{ color: color }}>
+                        {title}
+                      </Link>
+                    </NextLink>
                   </Dropdown.Item>
                 ))
               }
@@ -91,16 +89,16 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
           }
         </Navbar.Content>
         <Navbar.Collapse>
-          {collapseItems.map((item) => (
-            <Navbar.CollapseItem key={item}>
+          {Object.entries(salones).slice(1, 4).map(([key, { title, color, href }]) => (
+            <Navbar.CollapseItem key={key}>
               <Link
-                color="inherit"
                 css={{
                   minWidth: "100%",
+                  color: color,
                 }}
-                href="#"
+                href={href}
               >
-                {item}
+                {title}
               </Link>
             </Navbar.CollapseItem>
           ))}

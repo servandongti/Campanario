@@ -16,6 +16,7 @@ export const salones = {
   elCampanario: {
     title: 'El Campanario',
     color: '$elCampanario',
+    colorTitle: styles.elCampanarioGradient,
     logoSrc: '/logos/campanario.svg',
     href: '/salones/el-campanario',
     description: `
@@ -28,6 +29,7 @@ export const salones = {
   misionDelCampanario: {
     title: 'Misión del Campanario',
     color: '$misionDelCampanario',
+    colorTitle: styles.misionDelCampanarioGradient,
     logoSrc: '/logos/mision.svg',
     href: '/salones/mision-del-campanario',
     description: `
@@ -40,6 +42,7 @@ export const salones = {
   elGranCampanario: {
     title: 'El Gran Campanario',
     color: '$elGranCampanario',
+    colorTitle: styles.elGranCampanarioGradient,
     logoSrc: '/logos/gran-campanario.svg',
     href: '/salones/el-gran-campanario',
     description: `

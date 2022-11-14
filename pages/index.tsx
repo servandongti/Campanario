@@ -17,7 +17,7 @@ const Home: NextPage = () => {
             <Hero
               title={salones.home.title}
               sub={salones.home.sub}
-              desc={salones.home.description}
+              description={salones.home.description}
               colorTitle={salones.home.colorTitle}
             />
           </Wrapper>

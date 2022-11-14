@@ -1,9 +1,22 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { Hero, HeroProps, Wrapper } from "../../components";
 
-export default function Salon() {
-  const router = useRouter();
-  const { salon } = router.query;
-
-  return <div>Salon: {salon}</div>;
+interface Props extends HeroProps {
+  description: string;
 }
+
+const Salon = ({ title, description, colorTitle }: Props) => {
+  return (
+    <Wrapper>
+      <Hero title={title} description={description} colorTitle={colorTitle} />
+    </Wrapper>
+  )
+}
+
+
+Salon.getInitialProps = async ({ query }: { query: any }) => {
+  const { title, description, colorTitle } = query
+  return { title, description, colorTitle }
+}
+
+export default Salon;
