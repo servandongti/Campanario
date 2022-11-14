@@ -7,12 +7,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Navigation logoSrc={logoSrc} color={color} />
-      <div className={clsx(
-        "flex min-h-screen flex-col items-center justify-center ",
-        "py-2 bg-['#F5F2F4']"
-      )}>
-        <Layout title="El Campanario Eventos - Home">
+      <Layout title="El Campanario Eventos - Home">
+        <Navigation logoSrc={logoSrc} color={color} />
+        <div className={clsx(
+          "flex min-h-screen flex-col items-center justify-center ",
+          "py-2 bg-['#F5F2F4']"
+        )}>
           <Wrapper>
             <Hero
               title={salones.home.title}
@@ -22,9 +22,9 @@ const Home: NextPage = () => {
             />
           </Wrapper>
           <Slider />
-        </Layout>
-      </div>
-      <Footer />
+          <Footer />
+        </div>
+      </Layout>
     </>
   )
 }

@@ -15,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ title, sub, desc, colorTitle }) => {
   return (
     <>
       <div className={clsx(
-        'font-extrabold text-4xl sm:text-5xl lg:text-6xl',
+        'font-extrabold text-4xl sm:text-5xl lg:text-6xl max-w-sm sm:max-w-3xl lg:max-w-4xl',
         'tracking-tight text-center mx-auto', `${colorTitle}`
       )}>
         <h1 className={museo700.className}>{title}</h1>
