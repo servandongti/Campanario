@@ -9,7 +9,7 @@ export const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        © 2022 El Campanario Eventos. Derechos Reservados. Diseñado por Diervss
+        © 2022 El Campanario Eventos. Derechos Reservados. Diseñado por Diervsaware
       </a>
     </footer>
   )
