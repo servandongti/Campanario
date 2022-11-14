@@ -8,6 +8,9 @@
   "dependencies": {
     "@next/font": "^13.0.2",
     "@nextui-org/react": "^1.0.0-beta.10",
+    "embla-carousel-autoplay": "^7.0.5",
+    "embla-carousel-class-names": "^7.0.5",
+    "embla-carousel-react": "^7.0.5",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"

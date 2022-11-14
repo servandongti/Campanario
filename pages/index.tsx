@@ -1,10 +1,9 @@
 import type { NextPage } from 'next'
-import { Footer, Hero, Layout, Navigation, Wrapper } from '../components'
-import { clsx, descs, salones } from '../utils'
+import { Footer, Hero, Layout, Navigation, Wrapper, Carousel, Slider } from '../components'
+import { clsx, salones } from '../utils'
 
 const Home: NextPage = () => {
-  const { home } = descs
-  const { title, color, logoSrc } = salones.home
+  const { color, logoSrc } = salones.home
 
   return (
     <>
@@ -15,11 +14,17 @@ const Home: NextPage = () => {
       )}>
         <Layout title="El Campanario Eventos - Home">
           <Wrapper>
-            <Hero title={home.title} sub={home.sub} desc={home.desc} colorTitle={home.colorTitle} />
+            <Hero
+              title={salones.home.title}
+              sub={salones.home.sub}
+              desc={salones.home.description}
+              colorTitle={salones.home.colorTitle}
+            />
           </Wrapper>
+          <Slider />
         </Layout>
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }

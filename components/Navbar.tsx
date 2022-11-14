@@ -69,35 +69,15 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
                 },
               }}
             >
-              <Dropdown.Item
-                key={salones.elCampanario.title}
-                description={descs.campanario.desc}
-                textValue={salones.elCampanario.title}
-              >
-                <Navbar.Link href="/salones/el-campanario"
-                  css={{ color: salones.elCampanario.color }}
-                >
-                  El Campanario
-                </Navbar.Link>
-              </Dropdown.Item>
-              <Dropdown.Item
-                key={salones.misionDelCampanario.title}
-                description={descs.misionDelCampanario.desc}
-                textValue={salones.misionDelCampanario.title}
-              >
-                <Navbar.Link css={{ color: salones.misionDelCampanario.color }} href="/salones/mision-del-campanario">
-                  {salones.misionDelCampanario.title}
-                </Navbar.Link>
-              </Dropdown.Item>
-              <Dropdown.Item
-                key={salones.elGranCampanario.title}
-                description={descs.elGranCampanario.desc}
-                textValue={salones.elGranCampanario.title}
-              >
-                <Navbar.Link css={{ color: salones.elGranCampanario.color }} href="/salones/el-gran-campanario">
-                  {salones.elGranCampanario.title}
-                </Navbar.Link>
-              </Dropdown.Item>
+              {
+                Object.entries(salones).slice(1, 4).map(([key, salon]) => (
+                  <Dropdown.Item key={key} textValue={salon.title} description={salon.description}>
+                    <Link href={salon.href} css={{ color: salon.color, w: '100%' }}>
+                      {salon.title}
+                    </Link>
+                  </Dropdown.Item>
+                ))
+              }
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Content>
