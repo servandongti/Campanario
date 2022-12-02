@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 
 export const salones = {
   home: {
-    title: 'El Campanario Eventos.',
+    title: "El Campanario Eventos.",
     sub: 'Tu evento como lo soñaste',
     color: 'warning',
     colorTitle: styles.goldGradient,
