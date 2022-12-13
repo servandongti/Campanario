@@ -4,7 +4,6 @@ import { clsx, homeImages, salones } from '../utils'
 
 const Home: NextPage = () => {
   const { color, logoSrc } = salones.home
-
   return (
     <>
       <Layout title="El Campanario Eventos - Home">
@@ -21,10 +20,9 @@ const Home: NextPage = () => {
               colorTitle={salones.home.colorTitle}
             />
             <HomeSlider />
+
           </Wrapper>
-          <Wrapper>
-            <Slider />
-          </Wrapper>
+          <Slider />
           <Footer />
         </div>
       </Layout>

@@ -1,7 +1,7 @@
 .awadsBg {
     position: absolute;
-    width: 988.59px;
-    height: 165.55px;
+    width: 100%;
+    height: 100%;
     left: 32.68px;
     font-family: Roboto;
     font-style: normal;
@@ -11,18 +11,6 @@
     opacity: 0.2;
 }
 
-.awadsFg {
-    position: absolute;
-    width: 496.2px;
-    height: 54.86px;
-    left: 53px;
-    padding-top: 60px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 45px;
-    line-height: 56px;
-}
 
 .awards{
     position: relative;
@@ -33,6 +21,7 @@
     align-items: center;
     height: 90vh;
 }
+
 @media (max-width: 768px) {
     .awards{
         margin-top: -100px;
@@ -48,12 +37,16 @@
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 480px) {
     .awadsFg {
         position: absolute;
         width: 80vw;
         height: 29px;
         font-size: 50px;
+    }
+    .awards {
+      height: 5vh;
+      width: 100%;
     }
     .awadsBg {
         display: none;

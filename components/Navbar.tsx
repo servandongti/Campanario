@@ -64,11 +64,11 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
               }}
             >
               {
-                Object.entries(salones).slice(1, 4).map(([key, { title, description, href, colorTitle, color }]) => (
+                Object.entries(salones).slice(1, 4).map(([key, { title, description, href, colorTitle, color, logoSrc }]) => (
                   <Dropdown.Item key={key} textValue={title} description={description}>
                     <NextLink
                       style={{ width: '200px', height: '100px' }}
-                      href={{ pathname: href, query: { title: title, description: description, colorTitle: colorTitle } }}>
+                      href={{ pathname: href, query: { title: title, description: description, colorTitle: colorTitle, logoSrc: logoSrc, color: color } }}>
                       <Text color={color}>
                         {title}
                       </Text>
