@@ -1,6 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import { Navbar, Dropdown, Button, Link } from "@nextui-org/react";
+import { Navbar, Dropdown, Text } from "@nextui-org/react";
 import { clsx, salones, socials } from "../utils";
 import { Logo } from "./Logo";
 import { NavLayout } from "./NavLayout";
@@ -35,7 +35,6 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
           </Navbar.Link>
           <Dropdown isBordered>
             <Navbar.Item>
-
               <Dropdown.Button
                 auto
                 light
@@ -68,10 +67,11 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
                 Object.entries(salones).slice(1, 4).map(([key, { title, description, href, colorTitle, color }]) => (
                   <Dropdown.Item key={key} textValue={title} description={description}>
                     <NextLink
+                      style={{ width: '200px', height: '100px' }}
                       href={{ pathname: href, query: { title: title, description: description, colorTitle: colorTitle } }}>
-                      <Link css={{ color: color }}>
+                      <Text color={color}>
                         {title}
-                      </Link>
+                      </Text>
                     </NextLink>
                   </Dropdown.Item>
                 ))
@@ -89,17 +89,14 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
           }
         </Navbar.Content>
         <Navbar.Collapse>
-          {Object.entries(salones).slice(1, 4).map(([key, { title, color, href }]) => (
+          {Object.entries(salones).slice(1, 4).map(([key, { title, color, href, description, colorTitle }]) => (
             <Navbar.CollapseItem key={key}>
-              <Link
-                css={{
-                  minWidth: "100%",
-                  color: color,
-                }}
-                href={href}
-              >
-                {title}
-              </Link>
+              <NextLink style={{ textDecoration: 'none' }}
+                href={{ pathname: href, query: { title: title, description: description, colorTitle: colorTitle } }}>
+                <Text color={color} >
+                  {title}
+                </Text>
+              </NextLink>
             </Navbar.CollapseItem>
           ))}
         </Navbar.Collapse>
@@ -107,3 +104,4 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
     </NavLayout>
   );
 }
+

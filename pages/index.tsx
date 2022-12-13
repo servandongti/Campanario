@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import { Footer, Hero, Layout, Navigation, Wrapper, Carousel, Slider } from '../components'
-import { clsx, salones } from '../utils'
+import { Footer, Hero, Layout, Navigation, Wrapper, Carousel, Slider, HomeSlider } from '../components'
+import { clsx, homeImages, salones } from '../utils'
 
 const Home: NextPage = () => {
   const { color, logoSrc } = salones.home
@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Layout title="El Campanario Eventos - Home">
-        <Navigation logoSrc={logoSrc} color={color} />
+        <Navigation color={color} logoSrc={logoSrc} />
         <div className={clsx(
           "flex min-h-screen flex-col items-center justify-center ",
           "py-2 bg-['#F5F2F4']"
@@ -20,8 +20,11 @@ const Home: NextPage = () => {
               description={salones.home.description}
               colorTitle={salones.home.colorTitle}
             />
+            <HomeSlider />
           </Wrapper>
-          <Slider />
+          <Wrapper>
+            <Slider />
+          </Wrapper>
           <Footer />
         </div>
       </Layout>
