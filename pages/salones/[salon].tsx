@@ -1,5 +1,6 @@
-import React from "react";
-import { Hero, HeroProps, Wrapper, Navigation } from "../../components";
+import React, { useEffect } from "react";
+import { Hero, HeroProps, Wrapper, NavigationMision, NavigationCampanario, NavigationGran, HeroMision, HeroGran, HeroCampanario } from "../../components";
+import { clsx, routes } from "../../utils";
 
 interface Props extends HeroProps {
   description: string;
@@ -8,10 +9,28 @@ interface Props extends HeroProps {
 }
 
 const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
+
   return (
     <>
-      <Navigation logoSrc={logoSrc} color={color} />
-      <Hero title={title} description={description} colorTitle={colorTitle} />
+      {
+        title === 'El Campanario' ? (
+          <NavigationCampanario logoSrc={logoSrc} color={color} />
+        ) : title === 'Misión del Campanario' ? (
+          <NavigationMision logoSrc={logoSrc} color={color} />
+        ) : (
+          <NavigationGran logoSrc={logoSrc} color={color} />
+        )
+      }
+      <Wrapper>
+        <Hero title={title} description={description} colorTitle={colorTitle} />
+        {title === 'El Campanario' ? (
+          <HeroCampanario />
+        ) : title === 'Misión del Campanario' ? (
+          <HeroMision />
+        ) : (
+          <HeroGran />
+        )}
+      </Wrapper>
     </>
   )
 }

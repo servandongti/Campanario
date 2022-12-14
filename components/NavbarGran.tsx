@@ -5,14 +5,13 @@ import { Navbar, Dropdown, Text } from "@nextui-org/react";
 import { clsx, salones, socials } from "../utils";
 import { Logo } from "./Logo";
 import { NavLayout } from "./NavLayout";
-import { SocialIcon } from "./SocialIcon";
 
 interface Props {
   logoSrc: string;
   color: string;
 }
 
-export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
+export const NavigationGran: React.FC<Props> = ({ logoSrc, color }) => {
 
   return (
     <NavLayout>
@@ -84,30 +83,30 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
         <Navbar.Content>
 
           <NextLink
-            href={socials[0].whatsappHome}
+            href={socials[0].whatsappElGranCampanario}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8"
           >
-            <Image src={socials[0].whatsappIconHome} alt="icon" width={24} height={24} />
+            <Image src={socials[0].whatsappIconElGranCampanario} alt="icon" width={24} height={24} />
           </NextLink>
 
           <NextLink
-            href={socials[0].instagramHome}
+            href={socials[0].instagramElGranCampanario}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8"
           >
-            <Image src={socials[0].instagramIconHome} alt="icon" width={24} height={24} />
+            <Image src={socials[0].instagramIconElGranCampanario} alt="icon" width={24} height={24} />
           </NextLink>
 
           <NextLink
-            href={socials[0].facebookHome}
+            href={socials[0].facebookElGranCampanario}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8"
           >
-            <Image src={socials[0].facebookIconHome} alt="icon" width={24} height={24} />
+            <Image src={socials[0].facebookIconElGranCampanario} alt="icon" width={24} height={24} />
           </NextLink>
         </Navbar.Content>
         <Navbar.Collapse>

@@ -30,7 +30,7 @@ export const salones = {
     title: 'Misión del Campanario',
     color: '$misionDelCampanario',
     colorTitle: styles.misionDelCampanarioGradient,
-    logoSrc: '/logos/mision.svg',
+    logoSrc: '/logos/mision-del-campanario.svg',
     href: '/salones/mision-del-campanario',
     description: `
       Para que tu evento este envuelto en una cálida atmósfera, en cada pasaje de tu recepción con lo 

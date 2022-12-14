@@ -5,15 +5,13 @@ import { Navbar, Dropdown, Text } from "@nextui-org/react";
 import { clsx, salones, socials } from "../utils";
 import { Logo } from "./Logo";
 import { NavLayout } from "./NavLayout";
-import { SocialIcon } from "./SocialIcon";
 
 interface Props {
   logoSrc: string;
   color: string;
 }
 
-export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
-
+export const NavigationMision: React.FC<Props> = ({ logoSrc, color }) => {
   return (
     <NavLayout>
       <Navbar isBordered variant="sticky">
@@ -31,7 +29,6 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
           hideIn="xs"
           variant="underline"
         >
-
           <Navbar.Link href='/' color={color as any}>
             Inicio
           </Navbar.Link>
@@ -84,30 +81,30 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
         <Navbar.Content>
 
           <NextLink
-            href={socials[0].whatsappHome}
+            href={socials[0].whatsappMisionDelCampanario}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8"
           >
-            <Image src={socials[0].whatsappIconHome} alt="icon" width={24} height={24} />
+            <Image src={socials[0].whatsappIconMisionDelCampanario} alt="icon" width={24} height={24} onLoadingComplete={() => console.log(`icon: ${socials[0].whatsappIconElGranCampanario}`)} />
           </NextLink>
 
           <NextLink
-            href={socials[0].instagramHome}
+            href={socials[0].instagramMisionDelCampanario}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8"
           >
-            <Image src={socials[0].instagramIconHome} alt="icon" width={24} height={24} />
+            <Image src={socials[0].instagramIconMisionDelCampanario} alt="icon" width={24} height={24} />
           </NextLink>
 
           <NextLink
-            href={socials[0].facebookHome}
+            href={socials[0].facebookMisionDelCampanario}
             target="_blank"
             rel="noopener noreferrer"
             className="w-8 h-8"
           >
-            <Image src={socials[0].facebookIconHome} alt="icon" width={24} height={24} />
+            <Image src={socials[0].facebookIconMisionDelCampanario} alt="icon" width={24} height={24} />
           </NextLink>
         </Navbar.Content>
         <Navbar.Collapse>
