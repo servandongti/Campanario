@@ -7,7 +7,7 @@ import styles from "../styles/Slider.module.css"
 import { clsx, routes } from "../utils";
 import { Text } from "@nextui-org/react";
 
-const AUTOPLAY_INTERVAL = 5000;
+const AUTOPLAY_INTERVAL = 3500;
 
 export const HomeSlider = () => {
   const [isLoading, setLoading] = useState(true)
@@ -16,7 +16,7 @@ export const HomeSlider = () => {
       <Fade bottom>
         <div className={styles.awards}>
           <ReactCardCarousel autoplay={true} autoplay_speed={AUTOPLAY_INTERVAL}>
-            <div className={`group ${styles.award} aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8`}>
+            <div className={`group ${styles.award} aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8`}>
               <NextLink href={routes.elCampanario} className="absolute inset-0 z-10 text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
                 <h1 className="hidden sm:flex tracking-wider text-white" >El Campanario</h1>
               </NextLink>
@@ -33,9 +33,9 @@ export const HomeSlider = () => {
                 )}
                 onLoadingComplete={() => setLoading(false)}
               />
-              <Text className="flex sm:hidden justify-center items-center font-semibold" size={20}>El Campanario</Text>
+              <Text className="flex sm:hidden justify-center items-center font-medium" size={20}>El Campanario</Text>
             </div>
-            <div className={`group ${styles.award} aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8`}>
+            <div className={`group ${styles.award} aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8`}>
               <NextLink href={routes.elGranCampanario} className="absolute inset-0 z-10 text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
                 <h1 className="hidden sm:flex tracking-wider text-white" >El Gran Campanario</h1>
               </NextLink>
@@ -55,7 +55,7 @@ export const HomeSlider = () => {
 
               <Text className="flex sm:hidden justify-center items-center font-semibold" size={20}>El Gran Campanario</Text>
             </div>
-            <div className={`group ${styles.award} aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8`}>
+            <div className={`group ${styles.award} aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 xl:aspect-w-7 xl:aspect-h-8`}>
               <NextLink href={routes.misionDelCampanario} className="absolute inset-0 z-10 text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
                 <h1 className="hidden sm:flex tracking-wider text-white" >Mision Del Campanario</h1>
               </NextLink>
