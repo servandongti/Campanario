@@ -38,7 +38,7 @@ export const Hero: React.FC<HeroProps> = ({
         <h1
           className={clsx(
             museo700.className,
-            `font-extrabold`, `${titleSize ? titleSize : 'md:text-4xl sm:text-5xl'}`,
+            `font-extrabold`, `${titleSize ? titleSize : 'md:text-5xl lg:text-6xl'}`,
             'tracking-tight text-center'
           )}>
           {title}

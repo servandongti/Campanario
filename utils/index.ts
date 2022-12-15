@@ -4,3 +4,6 @@ export * from './socials';
 export * from './salones'
 export * from './services'
 export * from './homeImages'
+export * from './campanarioImages'
+export * from './misionImages'
+export * from './granImages'

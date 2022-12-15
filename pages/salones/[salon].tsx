@@ -1,5 +1,6 @@
+import { Grid } from "@nextui-org/react";
 import React from "react";
-import { Hero, HeroProps, Wrapper, NavigationMision, NavigationCampanario, NavigationGran, HeroMision, HeroGran, HeroCampanario } from "../../components";
+import { Hero, HeroProps, Wrapper, NavigationMision, NavigationCampanario, NavigationGran, HeroMision, HeroGran, HeroCampanario, GridCampanario, GridMision, GridGran } from "../../components";
 
 interface Props extends HeroProps {
   description: string;
@@ -8,6 +9,9 @@ interface Props extends HeroProps {
 }
 
 const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
+  const isCampanario = title === 'El Campanario';
+  const isMision = title === 'Misión del Campanario';
+
   return (
     <>
       {
@@ -28,6 +32,16 @@ const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
         ) : (
           <HeroGran />
         )}
+        {
+          isCampanario ? (
+            <GridCampanario />
+          ) : isMision ? (
+            <GridMision />
+          ) : (
+            <GridGran />
+          )
+        }
+        <Hero title="Contáctanos" titleSize="text-3xl" colorTitle={color} />
       </Wrapper>
     </>
   )
