@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Hero, HeroProps, Wrapper, NavigationMision, NavigationCampanario, NavigationGran, HeroMision, HeroGran, HeroCampanario } from "../../components";
-import { clsx, routes } from "../../utils";
 
 interface Props extends HeroProps {
   description: string;
@@ -9,7 +8,6 @@ interface Props extends HeroProps {
 }
 
 const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
-
   return (
     <>
       {
