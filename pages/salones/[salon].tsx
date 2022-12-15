@@ -1,14 +1,31 @@
 import { Grid } from "@nextui-org/react";
 import React from "react";
-import { Hero, HeroProps, Wrapper, NavigationMision, NavigationCampanario, NavigationGran, HeroMision, HeroGran, HeroCampanario, GridCampanario, GridMision, GridGran } from "../../components";
+import {
+  Hero,
+  HeroProps,
+  Wrapper,
+  NavigationMision,
+  NavigationCampanario,
+  NavigationGran,
+  HeroMision,
+  HeroGran,
+  HeroCampanario,
+  GridCampanario,
+  GridMision,
+  GridGran,
+  Map
+} from "../../components";
 
 interface Props extends HeroProps {
   description: string;
   logoSrc: string;
   color: string;
+  location: string;
+  phone: string;
+  email: string;
 }
 
-const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
+const Salon = ({ title, description, colorTitle, logoSrc, color, location, phone, email }: Props) => {
   const isCampanario = title === 'El Campanario';
   const isMision = title === 'Misión del Campanario';
 
@@ -42,6 +59,7 @@ const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
           )
         }
         <Hero title="Contáctanos" titleSize="text-3xl" colorTitle={color} />
+        <Map location={location} phone={phone} email={email} />
       </Wrapper>
     </>
   )
@@ -49,8 +67,8 @@ const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
 
 
 Salon.getInitialProps = async ({ query }: { query: any }) => {
-  const { title, description, colorTitle, logoSrc, color } = query
-  return { title, description, colorTitle, logoSrc, color }
+  const { title, description, colorTitle, logoSrc, color, location, phone, email } = query
+  return { title, description, colorTitle, logoSrc, color, location, phone, email }
 }
 
 export default Salon;

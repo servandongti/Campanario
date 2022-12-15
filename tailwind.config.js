@@ -6,7 +6,12 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
-    plugins: [require('@tailwindcss/aspect-ratio')],
+    extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(20px)',
+      },
+    },
+    plugins: [require('@tailwindcss/aspect-ratio', require('tailwindcss-filters'),)],
   }
 }

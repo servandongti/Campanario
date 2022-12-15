@@ -5,7 +5,6 @@ import { Navbar, Dropdown, Text } from "@nextui-org/react";
 import { clsx, salones, socials } from "../utils";
 import { Logo } from "./Logo";
 import { NavLayout } from "./NavLayout";
-import { SocialIcon } from "./SocialIcon";
 
 interface Props {
   logoSrc: string;
@@ -66,11 +65,32 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
               }}
             >
               {
-                Object.entries(salones).slice(1, 4).map(([key, { title, description, href, colorTitle, color, logoSrc }]) => (
+                Object.entries(salones).slice(1, 4).map(([key, {
+                  title,
+                  description,
+                  href,
+                  colorTitle,
+                  color,
+                  logoSrc,
+                  location,
+                  phone,
+                  email
+                }]) => (
                   <Dropdown.Item key={key} textValue={title} description={description}>
                     <NextLink
                       style={{ width: '200px', height: '100px' }}
-                      href={{ pathname: href, query: { title: title, description: description, colorTitle: colorTitle, logoSrc: logoSrc, color: color } }}>
+                      href={{
+                        pathname: href, query: {
+                          title: title,
+                          description: description,
+                          colorTitle: colorTitle,
+                          logoSrc: logoSrc,
+                          color: color,
+                          location: location,
+                          phone: phone,
+                          email: email
+                        }
+                      }}>
                       <Text color={color}>
                         {title}
                       </Text>
