@@ -12,7 +12,10 @@ import {
   GridCampanario,
   GridMision,
   GridGran,
-  Map
+  Map,
+  FooterCampanario,
+  FooterGran,
+  FooterMision,
 } from "../../components";
 import { clsx } from "../../utils";
 
@@ -65,6 +68,15 @@ const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
         </div>
       </Wrapper>
       <Map />
+      {
+        isCampanario ? (
+          <FooterCampanario />
+        ) : isMision ? (
+          <FooterMision />
+        ) : (
+          <FooterGran />
+        )
+      }
     </>
   )
 }
