@@ -12,6 +12,7 @@ import {
   GridCampanario,
   GridMision,
   GridGran,
+  Map
 } from "../../components";
 import { clsx } from "../../utils";
 
@@ -29,10 +30,9 @@ const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
   const isCampanario = title === 'El Campanario';
   const isMision = title === 'Misión del Campanario';
   console.log({ colorTitle })
-  const Map = (() => lazy(() => import('../../components/Map')))();
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <>
       {
         title === 'El Campanario' ? (
           <NavigationCampanario logoSrc={logoSrc} color={color} />
@@ -65,7 +65,7 @@ const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
         </div>
       </Wrapper>
       <Map />
-    </Suspense>
+    </>
   )
 }
 
