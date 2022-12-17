@@ -5,8 +5,7 @@ export const IframeGran = () => {
       allowFullScreen
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-      width="600"
-      height="450"
+      style={{ width: '100%', height: '100%', border: 0 }}
     />
   )
 }

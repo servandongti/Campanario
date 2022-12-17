@@ -21,9 +21,9 @@ const Home: NextPage = () => {
             />
             <HomeSlider />
           </Wrapper>
-          <Hero title="Nuestros planes adaptados a tus necesidades" colorTitle={salones.home.colorTitle} titleSize="text-3xl" />
+          <Hero title="Nuestros planes adaptados a tus necesidades" colorTitle={salones.home.colorTitle} titleSize="text-3xl md:text-4xl" />
           <div className={clsx('mb-8')}>
-            <Hero description='Todos nuestros planes cuentan con' titleSize='text-2xl' bold />
+            <Hero description='Todos nuestros planes cuentan con' descriptionSize='text-3xl' bold />
           </div>
           <Slider />
           <Footer />

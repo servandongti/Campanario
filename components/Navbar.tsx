@@ -72,9 +72,6 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
                   colorTitle,
                   color,
                   logoSrc,
-                  location,
-                  phone,
-                  email
                 }]) => (
                   <Dropdown.Item key={key} textValue={title} description={description}>
                     <NextLink
@@ -86,9 +83,6 @@ export const Navigation: React.FC<Props> = ({ logoSrc, color }) => {
                           colorTitle: colorTitle,
                           logoSrc: logoSrc,
                           color: color,
-                          location: location,
-                          phone: phone,
-                          email: email
                         }
                       }}>
                       <Text color={color}>

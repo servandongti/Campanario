@@ -51,9 +51,9 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
       {
         <p className={clsx(
-          `${descriptionSize ? descriptionSize : 'text-lg'} max-w-3xl font-normal p-4`,
+          `${descriptionSize ? descriptionSize : 'text-lg sm:text-xl'} max-w-3xl font-normal p-4`,
           `${bold ? 'font-semibold' : ''}`,
-          'mt-6 text-slate-600 text-center mx-auto',
+          'mt-6 text-slate-600 text-center mx-auto'
         )}>
           {description}
           {

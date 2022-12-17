@@ -1,5 +1,4 @@
-import { Grid } from "@nextui-org/react";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import {
   Hero,
   HeroProps,
@@ -13,8 +12,8 @@ import {
   GridCampanario,
   GridMision,
   GridGran,
-  Map
 } from "../../components";
+import { clsx } from "../../utils";
 
 interface Props extends HeroProps {
   description: string;
@@ -25,12 +24,15 @@ interface Props extends HeroProps {
   email: string;
 }
 
-const Salon = ({ title, description, colorTitle, logoSrc, color, location, phone, email }: Props) => {
+
+const Salon = ({ title, description, colorTitle, logoSrc, color }: Props) => {
   const isCampanario = title === 'El Campanario';
   const isMision = title === 'Misión del Campanario';
+  console.log({ colorTitle })
+  const Map = (() => lazy(() => import('../../components/Map')))();
 
   return (
-    <>
+    <Suspense fallback={<p>Loading...</p>}>
       {
         title === 'El Campanario' ? (
           <NavigationCampanario logoSrc={logoSrc} color={color} />
@@ -58,10 +60,12 @@ const Salon = ({ title, description, colorTitle, logoSrc, color, location, phone
             <GridGran />
           )
         }
-        <Hero title="Contáctanos" titleSize="text-3xl" colorTitle={color} />
-        <Map location={location} phone={phone} email={email} />
+        <div className={clsx('py-8')}>
+          <Hero title="Ubícanos" titleSize="text-4xl" colorTitle={colorTitle} />
+        </div>
       </Wrapper>
-    </>
+      <Map />
+    </Suspense>
   )
 }
 

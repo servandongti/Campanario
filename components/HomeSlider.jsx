@@ -12,7 +12,7 @@ const AUTOPLAY_INTERVAL = 3500;
 export const HomeSlider = () => {
   const [isLoading, setLoading] = useState(true)
   return (
-    <div className={clsx("relative mt-10 w-full flex flex-1 items-center justify-center")}>
+    <div className={clsx("relative w-full flex flex-1 items-center justify-center")}>
       <Fade bottom>
         <div className={styles.awards}>
           <ReactCardCarousel autoplay={true} autoplay_speed={AUTOPLAY_INTERVAL}>
